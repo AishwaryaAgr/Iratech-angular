@@ -1,0 +1,20 @@
+<div class="card" style="width: 18rem; margin: 20vh auto">
+  <div class="card-header">
+    <div class="btn btn-warning" (click)="add()">Add Phone Number</div>
+  </div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let item of numbers; let i = index"
+  >
+    <input
+      type="tel"
+      class="list-group-item"
+      #textbox="ngModel"
+      [(ngModel)]="item['phoneNumber' + i]"
+      name="textbox"
+    />
+  </ul>
+  <div class="card-header">
+    <div class="btn btn-primary" (click)="submit()">Submit</div>
+  </div>
+</div>

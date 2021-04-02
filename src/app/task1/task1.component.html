@@ -1,0 +1,17 @@
+<div class="card text-center">
+  <div class="card-body">
+    <h2 class="card-title">{{ ans }}</h2>
+    <input
+      class="card-text"
+      type="number"
+      #textbox="ngModel"
+      [(ngModel)]="id"
+      name="textbox"
+      style="width: 30%"
+      placeholder="Add index"
+    />
+    <button (click)="click()" class="btn btn-danger submitbtn">
+      Save Link
+    </button>
+  </div>
+</div>
